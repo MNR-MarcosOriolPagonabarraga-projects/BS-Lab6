@@ -14,8 +14,10 @@ base_samps = round(0.1 * fs);
 % Filter 7Hz Low Pass
 [b, a] = butter(2, 7/(fs/2), 'low');
 
-sum_cong = 0; n_cong = 0;
-sum_incong = 0; n_incong = 0;
+sum_cong = 0; 
+n_cong = 0;
+sum_incong = 0; 
+n_incong = 0;
 
 % Trigger Indices
 trigs = marks;
@@ -67,7 +69,7 @@ avg_joint_filt = filtfilt(b, a, avg_joint);
 %% PLOT ERPs (Fz, Cz, Pz)
 
 figure('Name','VSTM ERPs');
-ch_plot = [5, 14, 23]; 
+ch_plot = [2, 5, 8];
 labels = {'Fz', 'Cz', 'Pz'};
 
 for k=1:3
