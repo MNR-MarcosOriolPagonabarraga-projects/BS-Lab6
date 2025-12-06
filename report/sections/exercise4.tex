@@ -1,0 +1,52 @@
+\section{Visual Short Term Memory (VSTM) Task}
+
+In this section, we analyse EEG data recorded from a different cognitive paradigm:
+a Visual Short Term Memory task (Student 2 data).
+We extracted the stimulus-locked P300 component elicited by the second image of the pair,
+considering only trials with correct responses. The signals were low-pass filtered (7 Hz) to smooth the waveforms.
+
+\subsection{P300 Waveforms and Topography (Student 2)}
+
+\begin{figure}[H]
+    \centering
+    % REPLACE WITH IMAGE FROM EXERCICE_4_VSTM.m
+    \includegraphics[width=0.8\textwidth]{img/VSTM_ERPs.png}
+    \caption{Stimulus-locked P300 for Student 2 at Fz, Cz, and Pz. Blue: Congruent. Red: Incongruent. Dashed: Joint Average.}
+    \label{fig:vstm_erps}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % REPLACE WITH IMAGE FROM EXERCICE_4_VSTM.m
+    \includegraphics[width=\textwidth]{img/VSTM_Topos.png}
+    \caption{Topographic distribution of the P300 peak (250-400 ms) for the VSTM task.}
+    \label{fig:vstm_topos}
+\end{figure}
+
+\subsubsection*{Interpretation}
+The waveforms show a clear positive deflection peaking around 300-400 ms.
+Topographically, this positivity is widely distributed but shows parietal dominance,
+confirming it is a P300-like component associated with the matching/comparison process in working memory.
+
+\subsection{Behavioral Analysis}
+
+We calculated the response time (RT) and accuracy for the congruent (matching images)
+and incongruent (non-matching images) conditions.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Condition} & \textbf{Response Time (Mean $\pm$ STD)} & \textbf{Accuracy (\%)} \\
+\hline
+Congruent   & $0.147 \pm 0.033$ s & 96\% \\ 
+Incongruent & $0.145 \pm 0.034$ s & 100\% \\ 
+\hline
+\end{tabular}
+\caption{Behavioral performance for Student 2.}
+\label{tab:behavior}
+\end{table}
+
+The behavioral results generally indicate that incongruent trials (mismatch) require slightly
+more processing time (longer RT) and may result in slightly lower accuracy compared to
+congruent trials, reflecting the increased cognitive load in decision making.

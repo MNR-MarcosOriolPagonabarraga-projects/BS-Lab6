@@ -1,8 +1,3 @@
-%% ===============================================================
-% EXERCISE 3.6 — Effect of Misalignment (σ = 0, 10, 20 samples)
-% Channels: Fz (5), Cz (14), Pz (23)
-% ===============================================================
-
 clear; clc; close all;
 
 name = 'V13PLA.CNT';
@@ -14,22 +9,19 @@ chan_names = {'Fz','Cz','Pz'};
 pair_cong = [1 1; 3 8];
 pair_incong = [2 1; 4 8];
 
-% Response-locked triplet (all corrections)
+% Response-locked triplet
 triplet_all = [1 8 1; 2 8 1; 3 1 8; 4 1 8];
 
-sigmas = [0, 10, 20];   % perfect, misaligned 10, misaligned 20 samples
+sigmas = [0, 10, 20];
 
-
-%% ===============================================================
-%                STIMULUS-LOCKED (CONGRUENT + INCONGRUENT)
-% ===============================================================
+%% STIMULUS-LOCKED (CONGRUENT + INCONGRUENT)
 
 for c = 1:3
     
     figure;
     sgtitle(['Stimulus-Locked — Channel ' chan_names{c}]);
 
-    % ---- CONGRUENT ----
+    % CONGRUENT
     subplot(2,1,1); hold on;
     title('Congruent — Effect of Misalignment');
     for s = 1:length(sigmas)
@@ -40,7 +32,7 @@ for c = 1:3
     xlabel('Samples'); ylabel('Amplitude [\muV]');
     legend; grid on;
 
-    % ---- INCONGRUENT ----
+    % INCONGRUENT
     subplot(2,1,2); hold on;
     title('Incongruent — Effect of Misalignment');
     for s = 1:length(sigmas)
@@ -52,10 +44,7 @@ for c = 1:3
     legend; grid on;
 end
 
-
-%% ===============================================================
-%                         RESPONSE-LOCKED (ERN)
-% ===============================================================
+%% RESPONSE-LOCKED (ERN)
 
 for c = 1:3
     
