@@ -1,0 +1,102 @@
+\section{Effect of Trials on ERP Averaging}
+
+Synchronized averaging is essential for recovering ERP components from noisy EEG.
+While the ERP waveform is deterministic across repetitions, the background EEG
+activity is stochastic. Therefore, averaging $N$ trials increases the signal-to-noise
+ratio (SNR), causing the ERP to emerge progressively from the noise. The noise
+variance decreases proportionally to $1/\sqrt{N}$, which explains why larger
+numbers of trials yield clearer and more stable waveforms.
+
+\subsection*{2(a). Stimulus-Locked Averages (P2, N2, P3)}
+
+For both congruent and incongruent stimuli, progressive averages were computed
+using the first 10, 20, 30, and 40 trials, followed by the full average across all
+available epochs.
+
+The averaged ERP responses for each channel are shown below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/AV-ERP-Fz.png}
+    \caption{Averaged stimulus-locked ERP — Channel Fz. Clear emergence of P2, N2, and P3 components as the number of averaged trials increases.}
+    \label{fig:av_erp_fz}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/AV-ERP-Cz.png}
+    \caption{Averaged stimulus-locked ERP — Channel Cz. ERP morphology becomes progressively stable, especially for the P3 component.}
+    \label{fig:av_erp_cz}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/AV-ERP-Pz.png}
+    \caption{Averaged stimulus-locked ERP — Channel Pz. Parietal sites show the strongest P3 amplitude, consistent with classical ERP topography.}
+    \label{fig:av_erp_pz}
+\end{figure}
+
+Figures for channels Fz, Cz, and Pz show that:
+
+\begin{itemize}
+    \item With only 10 trials, the waveform is dominated by noise and ERP
+    components are difficult to identify.
+    \item With 20-30 trials, the P2, N2, and P3 begin to emerge with consistent
+    polarity and latency.
+    \item With 40 trials and the full average, the morphology stabilizes and the ERP
+    peaks appear clearly defined.
+\end{itemize}
+
+This behaviour is expected from ERP theory: components such as P3 (250–600 ms)
+are highly sensitive to averaging because of their low amplitude relative to background EEG.
+
+\subsection*{2(b). Response-Locked Averages (ERN)}
+
+A parallel analysis was performed for response-locked epochs. The averaged ERN
+waveforms for each channel are shown below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/AV-ERN-Fz.png}
+    \caption{Averaged response-locked ERN — Channel Fz. Clear frontal negative peak emerging as the number of trials increases.}
+    \label{fig:av_ern_fz}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/AV-ERN-Cz.png}
+    \caption{Averaged response-locked ERN — Channel Cz. The ERN becomes more defined around 30–40 trials, showing the expected fronto-central distribution.}
+    \label{fig:av_ern_cz}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/AV-ERN-Pz.png}
+    \caption{Averaged response-locked ERN — Channel Pz. Parietal regions show weaker ERN amplitude, consistent with its typical topography.}
+    \label{fig:av_ern_pz}
+\end{figure}
+
+The ERN (0–100 ms after the response) shows:
+
+\begin{itemize}
+    \item High variability for small $N$, with several trials showing opposite
+    polarity relative to the expected ERN.
+    \item Clear negative deflection as $N$ increases, stabilizing around 30–40 trials.
+    \item The full average produces a well-defined ERN morphology with the
+    characteristic frontocentral distribution.
+\end{itemize}
+
+\subsection*{ Interpretation}
+
+Across both stimulus-locked and response-locked analyses:
+
+\begin{itemize}
+    \item Increasing the number of trials significantly improves ERP SNR.
+    \item The morphology, amplitude, and latency of P2, N2, P3, and ERN stabilize
+    as $N$ increases.
+    \item Beyond approximately 40 trials, improvements become marginal,
+    indicating convergence toward a stable ERP estimate.
+\end{itemize}
+
+Thus, this exercise confirms the fundamental importance of synchronized averaging
+for recovering reliable ERPs from noisy EEG recordings.

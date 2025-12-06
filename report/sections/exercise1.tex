@@ -1,0 +1,152 @@
+\section{Analysis of the First Five ERP Epochs}
+
+\subsection*{Introduction}
+
+The purpose of this first exercise is to examine the morphology and variability of 
+the initial five EEG epochs recorded in both stimulus-locked and response-locked 
+conditions. Event-Related Potentials (ERPs) are time-locked neural responses that 
+reflect perceptual, cognitive, and motor processes. However, ERPs are embedded 
+within the background EEG, which exhibits large stochastic fluctuations.  
+Therefore, single-trial ERPs often do not resemble the canonical components 
+typically observed after averaging many repetitions.
+
+This section evaluates how five individual epochs behave across the midline 
+electrodes Fz, Cz, and Pz, and demonstrates why averaging is essential for 
+recovering P2, N2, P3, and ERN components.
+
+% ============================================================
+%                 Stimulus-Locked Figures
+% ============================================================
+
+\subsection{Stimulus-Locked Epochs (P2, N2, P3)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ERP-Fz.png}
+    \caption{Stimulus-locked single-trial epochs (first 5 trials) — Channel Fz. 
+    Large fluctuations dominate the waveform, preventing identification 
+    of early or late ERP components.}
+    \label{fig:stim_fz}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ERP-Cz.png}
+    \caption{Stimulus-locked single-trial epochs (first 5 trials) — Channel Cz.
+    Midline activity remains highly variable, masking morphology typically 
+    associated with P2, N2, or P3.}
+    \label{fig:stim_cz}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ERP-Pz.png}
+    \caption{Stimulus-locked single-trial epochs (first 5 trials) — Channel Pz.
+    Parietal oscillations, including strong alpha rhythms, obscure stimulus-locked 
+    components.}
+    \label{fig:stim_pz}
+\end{figure}
+
+\subsubsection*{Interpretation of Stimulus-Locked Epochs}
+
+Across the three midline electrodes (Fz, Cz, Pz), the first five stimulus-locked 
+epochs exhibit substantial amplitude variability (commonly $\pm 30$--$40\,\mu$V), 
+typical of raw EEG. Such variability masks the underlying ERP components:
+
+\begin{itemize}
+    \item \textbf{P2 (150–250 ms)} cannot be isolated due to the dominance of 
+    high-frequency oscillations.
+    \item \textbf{N2 (around 200 ms)} does not appear consistently across trials.
+    \item \textbf{P3 (250–600 ms)} is not visually identifiable in any channel.
+\end{itemize}
+
+There are also no observable differences between congruent and incongruent 
+conditions, which is expected because cognitive contrasts only emerge reliably 
+after substantial averaging.That is going to be done in the next excercice.
+
+
+\vspace{0.5cm}
+\textbf{Topographically:}
+\begin{itemize}
+    \item \textbf{Fz} shows slow frontal drifts consistent with prefrontal sources.
+    \item \textbf{Cz} presents fluctuating midline activity but no stable ERP features.
+    \item \textbf{Pz} displays rhythmic parietal oscillatory activity, predominantly alpha,
+    which masks potential late ERP components.
+\end{itemize}
+
+This confirms that single-trial recordings are insufficient to extract 
+stimulus-locked ERP morphology.
+
+
+% ============================================================
+%                   Response-Locked Figures
+% ============================================================
+
+\subsection{Response-Locked Epochs (ERN)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ERN-Fz.png}
+    \caption{Response-locked single-trial epochs (first 5 trials) — Channel Fz.
+    Although ERN typically peaks maximally at fronto-central sites, no identifiable 
+    ERN component is visible at the single-trial level.}
+    \label{fig:ern_fz}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ERN-Cz.png}
+    \caption{Response-locked single-trial epochs (first 5 trials) — Channel Cz.
+    Strong fluctuations obscure the expected ERN (0--100 ms post-response).}
+    \label{fig:ern_cz}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ERN-Pz.png}
+    \caption{Response-locked single-trial epochs (first 5 trials) — Channel Pz.
+    Parietal areas exhibit weaker error-related activity and pronounced noise.}
+    \label{fig:ern_pz}
+\end{figure}
+
+\subsubsection*{Interpretation of Response-Locked Epochs}
+
+The response-locked windows show similar behaviour to the stimulus-locked case. 
+The ERN is a small negative deflection occurring 0--100 ms after an erroneous 
+response, typically ranging from $-5$ to $-15\,\mu$V. Because of its low 
+amplitude, it is completely masked by single-trial noise:
+
+\begin{itemize}
+    \item No detectable ERN is visible in the first five trials in any channel.
+    \item Fz and Cz, where ERN should be maximal, show considerable variability 
+    and inconsistent polarity.
+    \item Pz exhibits even weaker error-related signals, as expected given its 
+    distance from the anterior cingulate cortex (ACC), the ERN generator.
+\end{itemize}
+
+These observations highlight that the ERN cannot be interpreted without averaging 
+a sufficiently large number of error trials.
+
+
+% ============================================================
+%                 Global Interpretation
+% ============================================================
+
+\subsection{ Interpretation}
+
+Taken together, the stimulus-locked and response-locked analyses show that 
+single-trial EEG is dominated by spontaneous cortical activity, eye blinks, 
+muscle artifacts, and non-phase-locked noise. As a consequence:
+
+\begin{itemize}
+    \item \textbf{ERP components are not visible} with only 5 trials.
+    \item \textbf{Congruency effects are completely obscured}.
+    \item \textbf{Topographic specializations} (frontal ERN, parietal P3) do not emerge.
+    \item \textbf{Single-trial polarity is inconsistent}, making interpretation impossible.
+\end{itemize}
+
+From a neurophysiological standpoint, the absence of identifiable components in 
+single epochs directly illustrates the necessity of synchronized averaging in ERP 
+research. ERP components represent phase-locked neural activity, whereas noise is 
+stochastic; therefore, only averaging cancels out uncorrelated fluctuations and 
+reveals consistent time-locked responses.

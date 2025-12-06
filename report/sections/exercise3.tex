@@ -1,0 +1,122 @@
+\section{Effect of Trials on ERP Feature Stability}
+
+In this section, we quantify how the number of averaged trials influences the stability of the
+Event-Related Potential (ERP) features.  
+Specifically, we analyse two canonical components:
+
+\begin{itemize}
+    \item The \textbf{P3} (stimulus-locked), measured from incongruent trials.
+    \item The \textbf{Error-Related Negativity (ERN)} (response-locked), measured from corrected responses.
+\end{itemize}
+
+Both amplitude and latency were computed for increasing numbers of averaged epochs,
+ranging from $N=5$ to $N=200$ in steps of five.
+
+The analysis was performed on three representative electrodes:
+
+\[
+\text{Fz (frontal)},\quad \text{Cz (central)},\quad \text{Pz (parietal)}.
+\]
+
+This selection captures the expected topographies of both components:  
+P3 maximally expressed parietally, and ERN maximally expressed fronto-centrally.
+
+% ==========================================================
+% FIGURE: Amplitude and Latency vs Number of Trials
+% ==========================================================
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/Comp-AV-P3-ERN.png}
+    \caption{Evolution of ERP feature extraction as a function of the number of averaged trials
+    for channels Fz, Cz and Pz. Top-left: P3 amplitude. Top-right: ERN amplitude. 
+    Bottom-left: P3 latency. Bottom-right: ERN latency.}
+    \label{fig:erp_features_trials}
+\end{figure}
+
+% ==========================================================
+% SUBSECTION: P3 RESULTS
+% ==========================================================
+
+\subsection{P3 Component (Stimulus-Locked)}
+
+\subsubsection*{Amplitude}
+
+A clear stabilisation pattern emerges (Fig.~\ref{fig:erp_features_trials}):  
+with small numbers of trials ($N < 20$), the extracted amplitude fluctuates substantially.
+This reflects the low signal-to-noise ratio typical of early-stage averaging.
+
+As $N$ increases:
+
+\begin{itemize}
+    \item Fz shows the smallest P3 amplitude, consistent with its frontal topography.
+    \item Cz increases moderately and becomes stable around $N \approx 60$-$80$.
+    \item Pz shows the expected maximal amplitude with a robust peak between $N=20$-$40$.
+\end{itemize}
+
+This behaviour aligns with well-known characteristics of the P3b component, 
+which peaks over parietal regions and requires sufficient averaging to overcome background EEG noise.
+
+\subsubsection*{Latency}
+
+P3 latency converges faster than amplitude.  
+Although early averages ($N < 20$) produce unstable peak detection, all channels
+stabilise at physiologically plausible latencies (approx.\ 350-380~ms) for
+$N \geq 40$.
+
+Notably, Pz again displays the most consistent values, reflecting its higher signal strength.
+
+% ==========================================================
+% SUBSECTION: ERN RESULTS
+% ==========================================================
+
+\subsection{ERN Component (Response-Locked)}
+
+\subsubsection*{Amplitude}
+
+The ERN amplitude behaves similarly:  
+initially unstable when few trials are averaged, but progressively converging to
+a characteristic negative deflection ($-10$ to $-15\,\mu\mathrm{V}$) as $N$ increases.
+
+Topographically, the ERN is maximal at Fz and Cz — a hallmark of its medial frontal generators.
+Pz exhibits a notably reduced amplitude, as expected.
+
+Stability is largely reached with $N \geq 40$-$60$ trials.
+
+\subsubsection*{Latency}
+
+ERN latency stabilizes around 30 - 70 ms, consistent with the classical timing
+of early error-monitoring processes originating from the anterior cingulate cortex.
+
+The transition from unstable measurements ($N < 20$) to stable and reproducible latencies 
+occurs again around $N \approx 40$-$50$.
+
+% ==========================================================
+% DISCUSSION — MINIMUM TRIALS
+% ==========================================================
+
+\subsection{Minimum Number of Trials Required for Stable ERP Features}
+
+The results strongly support the notion that ERP components require adequate averaging
+to overcome spontaneous EEG variability.
+
+Across all channels and features:
+
+\begin{itemize}
+    \item The stabilisation of amplitude and latency consistently occurs between 
+    \textbf{40 and 60 averaged trials}.
+    \item This threshold is remarkably similar for both the P3 and ERN components.
+    \item Components with stronger topographical expression (P3 at Pz, ERN at Fz/Cz) achieve
+    stability slightly faster.
+    \item With fewer than 20 trials, amplitudes and latencies exhibit large fluctuations,
+    making the measurements unreliable for scientific or clinical interpretation.
+\end{itemize}
+
+\subsection{Interpretation}
+
+The convergence analyses demonstrate that averaging is essential to recover clean, interpretable ERP
+features. Both P3 and ERN follow classic neurophysiological patterns in amplitude and latency,
+and require a minimum of 40-60 repetitions to produce robust and stable metrics. If we have to give a final number we would agree on 50 as a good threshold.
+
+This finding is consistent with the literature on EEG signal processing and highlights the
+trade-off between experiment duration and ERP feature reliability.

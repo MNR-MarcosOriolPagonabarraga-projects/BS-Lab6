@@ -1,0 +1,100 @@
+\section*{3.6 Effect of Temporal Misalignment on ERP Averaging}
+
+The purpose of this exercise is to evaluate how temporal jitter in the extraction of epochs affects the averaged Event-Related Potentials (ERPs). Two modified functions,
+\texttt{promedioStimulusLockedv2.m} and \texttt{promedioResponseLockedv2.m}, introduce a random temporal perturbation in the alignment point following a Gaussian distribution with zero mean and standard deviation $\sigma$ (in samples). Since the EEG sampling frequency is 250~Hz, the two tested misalignments ($\sigma=10$ and $\sigma=20$) correspond to temporal uncertainties of 40~ms and 80~ms, respectively.
+
+Three averaged epochs were computed for each condition:
+\[
+\sigma = 0 \ (\text{perfect alignment}), \qquad
+\sigma = 10, \qquad
+\sigma = 20.
+\]
+
+For the Stimulus-locked ERPs, congruent and incongruent trials were analysed separately.  
+For the Response-locked ERN, all corrected error trials were combined.
+
+The following figures show the three averaged ERPs for the Fz, Cz, and Pz channels.
+
+% ============================
+% STIMULUS-LOCKED FIGURES
+% ============================
+
+\subsection*{Stimulus-Locked ERPs}
+
+\subsubsection*{Channel Fz}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/3.7-S-Fz.png}
+    \caption{Stimulus-locked ERPs at Fz: effect of misalignment for congruent (top) and incongruent (bottom) trials.}
+\end{figure}
+
+\subsubsection*{Channel Cz}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/3.7-S-Cz.png}
+    \caption{Stimulus-locked ERPs at Cz under perfect alignment and temporal jitter ($\sigma = 0, 10, 20$).}
+\end{figure}
+
+\subsubsection*{Channel Pz}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/3.7-S-Pz.png}
+    \caption{Stimulus-locked ERPs at Pz for congruent and incongruent conditions. Misalignment reduces peak sharpness.}
+\end{figure}
+
+% ============================
+% RESPONSE-LOCKED ERN FIGURES
+% ============================
+
+\subsection*{Response-Locked ERN}
+
+\subsubsection*{Channel Fz}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/3.7-ERN-Fz.png}
+    \caption{Response-locked ERN at Fz. Increasing temporal jitter reduces the ERN amplitude.}
+\end{figure}
+
+\subsubsection*{Channel Cz}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/3.7-ERN-Cz.png}
+    \caption{Response-locked ERN at Cz for $\sigma=0$, $10$, and $20$ samples. Misalignment broadens the negative peak.}
+\end{figure}
+
+\subsubsection*{Channel Pz}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/3.7-ERN-Pz.png}
+    \caption{Response-locked ERN at Pz. Increasing misalignment reduces temporal precision of the component.}
+\end{figure}
+
+% ============================
+% ANALYSIS
+% ============================
+
+\subsection*{Analysis and Interpretation}
+
+The results confirm that temporal misalignment has a clear impact on the morphology of both the P3 (stimulus-locked) and ERN (response-locked) components:
+
+\begin{itemize}
+    \item \textbf{Peak amplitude decreases with misalignment:}.  
+    It causes individual peaks to occur at slightly different timings across trials. When averaging, these peaks no longer sum constructively, resulting in reduced amplitude. This effect is particularly evident at Fz and Cz.
+
+    \item \textbf{Waveforms become smoother and less sharp:}  
+    Temporal smearing leads to broader, flatter peaks. The P3, originally sharp around 300--350 ms, becomes more rounded as $\sigma$ increases.
+
+    \item \textbf{Latency becomes less reliable:}  
+    With greater temporal jitter, the position of the maximum (P3) or minimum (ERN) becomes harder to localize. This is reflected in small shifts and increased variability in the peak location.
+
+    \item \textbf{Effects are stronger for larger $\sigma$:} 
+    The comparison between $\sigma=10$ and $\sigma=20$ shows an almost linear degradation of waveform clarity and peak amplitude.
+
+    \item \textbf{ERN is more sensitive than P3:} 
+    Because ERN is a very early and narrow component (within 0--100 ms), even small misalignments cause strong distortion. This matches the observed larger morphological changes in ERN plots compared with P3.
+\end{itemize}
+
+\subsection*{Conclusion}
+
+Temporal misalignment introduces destructive averaging effects that attenuate peak amplitude, broaden ERP components, and decrease latency precision. Given that even $\sigma = 10$ samples (40~ms) produces noticeable distortions, maintaining accurate temporal alignment during preprocessing is essential.  
+These findings highlight the importance of precise event marking and justify the common practice of artifact rejection and event correction before ERP averaging.
