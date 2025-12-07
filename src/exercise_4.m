@@ -66,7 +66,7 @@ avg_cong_filt = filtfilt(b, a, avg_cong);
 avg_incong_filt = filtfilt(b, a, avg_incong);
 avg_joint_filt = filtfilt(b, a, avg_joint);
 
-%% PLOT ERPs (Fz, Cz, Pz)
+%% Plots
 
 figure('Name','VSTM ERPs');
 ch_plot = [2, 5, 8];
@@ -84,7 +84,7 @@ for k=1:3
 end
 saveas(gcf, 'VSTM_ERPs.png');
 
-%% TOPOGRAMS
+%% Topograms
 
 t_idx = find(t_axis >= 0.25 & t_axis <= 0.40);
 
@@ -105,7 +105,8 @@ title('Joint', FontSize=16);
 
 saveas(gcf, 'VSTM_Topos.png');
 
-%% BEHAVIORAL METRICS
+%% Behavioral Metrics
+
 fprintf('=== Student 2 Behavioral ===\n');
 fprintf('Congruent: RT = %.3f ± %.3f s\n', mean(RT_cong), std(RT_cong));
 fprintf('Incongruent: RT = %.3f ± %.3f s\n', mean(RT_incong), std(RT_incong));

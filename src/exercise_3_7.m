@@ -19,7 +19,7 @@ P3_peaks_cong = zeros(1, num_topo_chans);
 P3_peaks_incong = zeros(1, num_topo_chans);
 ERN_peaks = zeros(1, num_topo_chans);
 
-%% CALCULATE PEAKS
+%% Calculate Peaks
 fprintf('Calculating Topography Data...\n');
 
 for k = 1:num_topo_chans
@@ -45,7 +45,7 @@ for k = 1:num_topo_chans
     ERN_peaks(k) = abs(min(avg(win_idx)));
 end
 
-%% PLOT TOPOGRAMS
+%% Plots
 figure('Name', 'Topographic Distributions', 'Color', 'w');
 
 subplot(1,3,1);

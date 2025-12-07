@@ -1,4 +1,4 @@
-\section{Visual Short Term Memory (VSTM) Task}
+\section{Exercise 2: Visual Short Term Memory (VSTM) Task}
 
 In this section, we analyse EEG data recorded from a different cognitive paradigm:
 a Visual Short Term Memory task (Student 2 data).
@@ -9,24 +9,26 @@ considering only trials with correct responses. The signals were low-pass filter
 
 \begin{figure}[H]
     \centering
-    % REPLACE WITH IMAGE FROM EXERCICE_4_VSTM.m
-    \includegraphics[width=0.8\textwidth]{img/VSTM_ERPs.png}
-    \caption{Stimulus-locked P300 for Student 2 at Fz, Cz, and Pz. Blue: Congruent. Red: Incongruent. Dashed: Joint Average.}
+    \includegraphics[width=0.9\textwidth]{img/VSTM_ERPs.png}
+    \caption{Stimulus-locked P300 for Student 2 at Fz, Cz, and Pz. Blue: Congruent. Red: Incongruent. Dashed: Joint Average. Note the high variability and oscillatory nature of the signals.}
     \label{fig:vstm_erps}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    % REPLACE WITH IMAGE FROM EXERCICE_4_VSTM.m
     \includegraphics[width=\textwidth]{img/VSTM_Topos.png}
-    \caption{Topographic distribution of the P300 peak (250-400 ms) for the VSTM task.}
+    \caption{Topographic distribution of the P300 peak (250-400 ms) for the VSTM task. The distribution is atypical, showing strong lateralization.}
     \label{fig:vstm_topos}
 \end{figure}
 
 \subsubsection*{Interpretation}
-The waveforms show a clear positive deflection peaking around 300-400 ms.
-Topographically, this positivity is widely distributed but shows parietal dominance,
-confirming it is a P300-like component associated with the matching/comparison process in working memory.
+
+The waveforms in Figure \ref{fig:vstm_erps} display considerable variability compared to the standard Grand Averages seen in Exercise 1. 
+\begin{itemize}
+    \item \textbf{Waveforms:} At \textbf{Pz} and \textbf{Fz}, the Congruent condition (blue) shows a distinct positive peak around 350--400 ms, consistent with P300 timing. However, the Incongruent condition (red) shows a different morphology, with a delayed or broader positivity particularly visible at \textbf{Cz} around 450 ms.
+    \item \textbf{Topography:} The topographic maps (Figure \ref{fig:vstm_topos}) deviate from the classic midline centro-parietal distribution. The \textbf{Congruent} condition shows a focal positivity over the left central/parietal region, while the \textbf{Incongruent} condition displays positivity concentrated in the right posterior/occipital region. The \textbf{Joint} average shows a bilateral posterior distribution.
+\end{itemize}
+These irregular distributions likely reflect the lower signal-to-noise ratio of a single-subject recording (Student 2) compared to the grand average of 9 subjects used in the previous exercise.
 
 \subsection{Behavioral Analysis}
 
@@ -47,6 +49,8 @@ Incongruent & $0.145 \pm 0.034$ s & 100\% \\
 \label{tab:behavior}
 \end{table}
 
-The behavioral results generally indicate that incongruent trials (mismatch) require slightly
-more processing time (longer RT) and may result in slightly lower accuracy compared to
-congruent trials, reflecting the increased cognitive load in decision making.
+The behavioral results for this specific student are notably fast ($\approx 145$ ms). 
+Contrary to the standard "Stroop-like" interference effect—where incongruent stimuli 
+typically cause slower reactions and more errors—this subject performed \textbf{equally fast (or slightly faster)} 
+on incongruent trials and achieved \textbf{100\% accuracy}. This suggests the subject did not experience the 
+expected cognitive conflict, or the task difficulty was low enough to allow ceiling performance.

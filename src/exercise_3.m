@@ -31,7 +31,7 @@ P3_lat = zeros(3, num_steps);
 ERN_amp = zeros(3, num_steps);
 ERN_lat = zeros(3, num_steps);
 
-%% MAIN LOOP
+%% Main loop
 
 for c = 1:3
 
@@ -75,7 +75,7 @@ for c = 1:3
     end
 end
 
-%%  Plotting
+%% Plots
 
 N_values = step:step:maxN;
 

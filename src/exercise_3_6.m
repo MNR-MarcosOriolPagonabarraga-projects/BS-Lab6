@@ -14,7 +14,7 @@ triplet_all = [1 8 1; 2 8 1; 3 1 8; 4 1 8];
 
 sigmas = [0, 10, 20];
 
-%% STIMULUS-LOCKED (CONGRUENT + INCONGRUENT)
+%% Stimulus-Locked (Congruent + Incongruent)
 
 for c = 1:3
     
@@ -44,7 +44,7 @@ for c = 1:3
     legend; grid on;
 end
 
-%% RESPONSE-LOCKED (ERN)
+%% Response-Locked (ERN)
 
 for c = 1:3
     

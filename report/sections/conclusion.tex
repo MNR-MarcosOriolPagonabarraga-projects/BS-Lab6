@@ -1,7 +1,38 @@
 \section{Conclusion}
 
-This lab session demonstrated the critical role of \textbf{synchronized averaging} in extracting
-event-related potentials. We showed that approximately 40-50 trials are required to obtain
-stable P3 and ERN features. We also verified that the \textbf{P3} is parietally distributed
-while the \textbf{ERN} is fronto-central. Finally, applying these techniques to the VSTM
-task confirmed that these components are robust markers of cognitive processing across different paradigms.
+This laboratory session allowed us to practically verify the fundamental principles of Event-Related Potential (ERP) analysis, moving from theoretical concepts to the processing of real EEG data. Our results highlight the critical necessity of signal processing techniques to extract meaningful neural correlates from background noise.
+
+The key findings from our analysis can be summarized as follows:
+
+\begin{itemize}
+    \item \textbf{Necessity of Synchronized Averaging:} 
+    Our analysis of single-trial epochs demonstrated that the high amplitude of spontaneous background EEG completely 
+    obscures ERP components. Neither the P3 nor the ERN were identifiable in individual trials, confirming that synchronized 
+    averaging is indispensable for cancelling out stochastic noise and revealing time-locked neural responses.
+
+    \item \textbf{Minimum Trials for Stability:} 
+    By systematically increasing the number of averaged epochs, we determined that a minimum of \textbf{40 to 50 trials} 
+    is required to obtain stable and reliable ERP features. Below this threshold, both amplitude and latency measurements 
+    fluctuated significantly, making them unreliable for clinical or experimental interpretation.
+
+    \item \textbf{Topographic Specificity:} 
+    We successfully replicated the known topographic distributions of the studied components. The \textbf{P3} component 
+    showed a clear parietal dominance (maximal at Pz), consistent with attention and memory processing. In contrast, the 
+    \textbf{ERN} exhibited a fronto-central distribution (maximal at Fz and Cz), aligning with its generation in the 
+    Anterior Cingulate Cortex.
+
+    \item \textbf{Impact of Temporal Precision:} 
+    The misalignment simulation revealed that precise event marking is as critical as trial count. Introducing a temporal 
+    jitter of just $\sigma=10$ samples (40 ms) caused destructive interference, significantly reducing peak amplitude and 
+    smoothing the waveform morphology.
+
+    \item \textbf{Individual Variability (VSTM Task):} 
+    Applying these methods to the Visual Short Term Memory task highlighted the challenges of analyzing single-subject data. 
+    Unlike the clean "Grand Mean" averages, Student 2's data exhibited "messier" waveforms and atypical lateralization. 
+    Furthermore, the unexpected behavioral result-where the subject was faster and perfectly accurate on incongruent 
+    trials-suggests that the cognitive load was insufficient to induce the standard interference effect for this individual.
+\end{itemize}
+
+In conclusion, while group-level averaging reveals clear and robust neurophysiological trends, this session demonstrated 
+that individual EEG analysis requires careful attention to signal quality, precise synchronization, and an adequate number 
+of repetitions to draw valid conclusions.
